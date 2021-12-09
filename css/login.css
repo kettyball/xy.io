@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+body{
+	background-color:#7bb3ca;
+    background-image:url("image/001.png");
+	background-repeat: no-repeat;
+	margin-right: auto;
+	margin: 0px 0px 0px 0px;
+}
+
+.headfirst{
+    background-color: #255176;
+    height: 50px;
+}
+.fontfirst{
+    font-style:normal;
+	font-variant:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size: 20px;
+    color: white;
+    margin-left: 50px;
+    line-height:250%;
+}
+.h-content {
+	width: 900px;
+	margin: 0px auto;
+	position: relative;
+} 
+.h-content div{
+	width:50%;
+	height: 100%
+}
+.student{
+	margin-top: 200px;
+	float: left;
+}
+.teacher{
+	margin-top: 200px;
+	float: right;
+}
+.student-img {
+	height: 300px;
+	margin-left: 40px;
+}
+.teacher-img {
+	height: 300px;
+	margin-left:100px;
+}
+
+

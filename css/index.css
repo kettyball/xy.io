@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+body{
+	background-color: #F0F0F0;
+    background-image:url("image/001.png");
+	background-repeat: no-repeat;
+	margin-right: auto;
+	margin: 0px 0px 0px 0px;
+}
+
+.headfirst{
+    background-color: #255176;
+    height: 50px;
+}
+.fontfirst{
+    font-style:normal;
+	font-variant:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size: 20px;
+    color: white;
+    margin-left: 50px;
+    line-height:250%;
+}
+.container{
+	background-color: #7bb3ca;
+	height: 400px;
+	margin-top: -21px;
+}
+.h-content {
+	width: 900px;
+	margin: 0px auto;
+	position: relative;
+	
+} 
+.h-content div{
+	width:50%;
+	height: 100%
+}
+.container-1{
+	margin-top: 0px;
+	margin-left: -90px;
+	float: left;
+}
+
+.container-2{
+	margin-top: 0px;
+	float: right;
+}
+.ball1-img {
+	height: 120px;
+	margin-top: 200px;
+	margin-left: 0px;
+}
+.ball2-img {
+	height: 120px;
+	margin-bottom: 70px;
+	margin-left: -40px;
+}
+.ball3-img {
+	height: 110px;
+	margin-top: 200px;
+	margin-left: -20px;
+}
+.ball4-img {
+	height: 120px;
+	margin-bottom: 70px;
+	margin-left:-40px;
+}
+.pingtai-img {
+	height: 290px;
+	margin-top: 50px;
+	margin-left:100px;
+}
+.xuanke-img{
+	height: 160px;
+	margin-bottom: 0px;
+	margin-left:0px;
+}
+
