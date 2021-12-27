@@ -130,7 +130,17 @@ textarea {
     color: #fff;
 }
 
-
+.body_right{
+    width: calc(100% - 200px);
+    height: 1100px;
+    display: inline-block;
+    vertical-align: top;
+    background:#f3faff;
+    font-size: 32px;
+    color: #999;
+    text-align: center;
+    line-height: 100px;
+}
 .body_left_list{
     width: 100%;
 	margin-top: 20px;
