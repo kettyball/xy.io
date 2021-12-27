@@ -1,185 +1,175 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<title></title>
-	<link rel="stylesheet" href="./layer/theme/default/layer.css">
-	<link rel="stylesheet" type="text/css" href="./css/reponse.css">
-	<style type="text/css">
-		.alertceng{
-			background: #FFFFFF;
-			padding: 10px;
-			display: none;
-		}
-		.alertceng span.title{
-			margin-right: 10px;
-		}
-	</style>
-</head>
-<body>
-	<div class="layui-fluid layadmin-homepage-fluid" style="background: #fff;width:90%;margin:0 auto;">
-		<div id="page">
-			<div class="btn-container">
-				<button class="layui-btn" onclick="addtr();">新增一行</button>
-				<button class="layui-btn" onclick="ExportExcel();">导出Excel</button>
-				<button class="layui-btn" onclick="resivetabledata();">获取table数据</button>
-				<button class="layui-btn" onclick="reloadtable();">刷新table表格</button>
-				<button class="layui-btn" onclick="coldata();">获取某一列的数据</button>
-			</div>
-			<table id="table" class="reponsetable" ></table>
-			<script type="text/html" id="editer">
-				<a class="layui-btn layui-btn-xs" onclick="edittr(this)">编辑</a>
-				<a class="layui-btn layui-btn-xs" onclick="deletetr(this)">删除</a>
-				<a class="layui-btn layui-btn-xs" onclick="uptr(this)">上移</a>
-				<a class="layui-btn layui-btn-xs" onclick="downtr(this)">下移</a>
-		  </script>
-		</div>
-	</div>
-	<div id="editcontent" class="alertceng">
-			<p><span class="title">姓名:</span><input type="text" id="Name"/></p>
-			<p><span class="title">年龄:</span><input type="text" id="Age"/></p>
-			<p><span class="title">性别:</span><input type="text" id="Gender"/></p>
-			<p><span class="title">身高:</span><input type="text" id="Height"/></p>
-			<p><span class="title">省份:</span><input type="text" id="Province"/></p>
-			<p><span class="title">市级:</span><input type="text" id="Sport"/></p>
-	</div>
-</body>
-<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="./js/jquery.basictable.min.js"></script>
-<script type="text/javascript" src="./reponsetable.min.js"></script>
-<script type="text/javascript" src="layer/layer.js"></script>
-<script type="text/javascript">
-	$(function(){
-		$('#table').basictable({
-			breakpoint: 768
-		});
-		$("#table").reponsetable({
-			"id":"table",
-			"operation": "editer",
-			"type":"numbers",
-			"colum": [
-				{"field": "Name","title": "姓名"},
-				{"field": "Age","title": "年龄"},
-				{"field": "Gender","title": "性别"},
-				{"field": "Height","title": "身高"},
-				{"field": "Province","title": "省份"},
-				{"field": "Sport","title": "市级"}
-			],
-			"data": [
-				{"Name": "jAHBSvfkewmbrgevfkuebrfjtgkjubrhtk","Gender": "女","Height": 189,"Province": "河北","Sport": "唐山市"},
-				{"Name": "李四","Age": 15,"Gender": "女","Height": 189,"Province": "河北","Sport": "邯郸市"},
-				{"Name": "1","Age": 15,"Gender": "1","Height": 189,"Province": "1","Sport": "1"},
-				{"Name": "2","Age": 15,"Gender": "2","Height": 2,"Province": "2","Sport": "2"},
-				{"Name": "3","Age": 15,"Gender": "4","Height": 189,"Province": "3","Sport": "3"},
-			]
-		});
+  <head>
+    <meta charset="utf-8" />
+    <title>登录</title>
+    <link rel="stylesheet" href="CSS/normalize.css">
+	  </head>
+<style>
+	
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans',sans-serif;
+    margin: 0;
+    background: url(./src/background.jpeg) no-repeat;
+    background-size: 1920px auto;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
-	})
-	function addtr() {
-		layer.open({
-		  type: 1,
-		  title: '编辑人员信息',
-		  closeBtn: 1,
-		  area: '516px',
-		  skin: '#fff', //没有背景色
-		  shadeClose: true,
-		  content: $('#editcontent'),
-		  btn:["保存","关闭"],
-		  btn1:function(index,layero){
-			  var Name=$("#Name").val();
-			  var Age=$("#Age").val();
-			  var Gender=$("#Gender").val();
-			  var Height=$("#Height").val();
-			  var Province=$("#Province").val();
-			  var Sport=$("#Sport").val();
-			  var obj = {
-				"Name":Name,
-			  	"Age": Age,
-			  	"Gender": Gender,
-			  	"Height": Height,
-			  	"Province": Province,
-				"Sport":Sport
-			  };
-			  reponse.addtr(obj, "table");
-			  //reponse.editsavetr(obj, "table");
-			  layer.close(index);
-		  },btn2:function(index,layero){
-			  layer.close(index);
-		  }
-		});
-	};
-	function uptr(btn, e) {
-		var tr = $(btn).parent().parent();
-		reponse.moveuptr(tr, "table");
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  display: block;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+.login_logo
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width: 300px;
+    height: 400px;
+}
+.login_logo h1 {
+    color: #fff;
+    text-shadow: 0 0 10px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+h1 {
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.link
+{
+  display: block;
+  color:white;
+  background-color: #4CAF50;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+.link:hover
+{
+    background-color: #45a049;
+}
+a {
+    text-decoration: none;
+}
+</style>
+
+<body>
+
+    <div class="login_logo">
+        <h1>Login</h1>
+  <form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
+    <label for="name">用户名</label>
+    <input type="text" id="name" placeholder="用户名" >
+    <label for="password">密码</label>
+    <input type="text" id="password"  placeholder="密码" >
+    <label for="place">身份</label>
+    <select id="identity" name="identity" onchange="testClk()">
+      <option value="user">用户</option>
+      <option value="manager">管理员</option>
+    </select>
+    <div id="org"></div>
+    <a class="link" href="index.html" onclick="javascript:checkCookie(document.getElementById('name').value);return validateForm()">登录</a>
+  </form>
+</div>
+
+<script> 
+  function testClk(){ 
+    var obj = document.getElementById("org"); 
+    var sel = document.getElementById("identity"); 
+    if (sel.value == "manager") { 
+      var input1 = document.createElement('input');
+       input1.setAttribute('type', 'text');
+        input1.setAttribute('name', 'countrywrite'); 
+        obj.insertBefore(input1,null);
+      } }
+   </script> 
+
+<script>
+  function validateForm(){
+  var x=document.forms["myForm"]["name"].value;
+    if (x==null || x==""){
+    alert("输入不得为空");
+    return false;
+    }
+  }
+  </script>
+
+
+ <script>
+    function setCookie(cname,cvalue,exdays){
+        var d = new Date();
+        d.setTime(d.getTime()+(exdays*24*60*60*1000));
+        var expires = "expires="+d.toGMTString();
+        document.cookie = cname+"="+cvalue+"; "+expires;
+    }
+    function getCookie(cname){
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+        }
+        return "";
+    }
+    function checkCookie(cname){
+    setCookie("username",cname,30);
+	var user=getCookie("username");
+	if (user!=""){
+		alert("欢迎 " + user + "登录");
 	}
-	function downtr(btn, e) {
-		var tr = $(btn).parent().parent();
-		reponse.moveDown(tr, "table");
+	else {
+		user = prompt("请输入你的用户名:","");
+  		if (user!="" && user!=null){
+    		setCookie("username",user,30);
+    	}
 	}
-	function ExportExcel() {
-		var tableobj=$("#table").data("tableObj");
-		reponse.JSONToCSVConvertor(tableobj, true,"人员表格");
-	}
-	function resivetabledata(){
-		var pp=$("#table").data("tableObj").data;
-		alert(JSON.stringify(pp));
-	}
-	function reloadtable(){
-		var data=[
-			{"Name": "1111","Age": 15,"Gender": "1","Height": 189,"Province": "1","Sport": "1"},
-			{"Name": "2222","Age": 15,"Gender": "2","Height": 2,"Province": "2","Sport": "2"},
-			{"Name": "3333","Age": 15,"Gender": "4","Height": 189,"Province": "3","Sport": "3"}
-		]
-		reponse.reloadtable(data,"table");
-	}
-	function edittr(a, e) {
-		var tr = $(a).parent().parent();
-		reponse.resiverowdata(tr, "table");
-		var rowdata=$("#table").data("rowdata");
-		//alert(JSON.stringify(rowdata));
-		//页面层-佟丽娅
-		
-		layer.open({
-		  type: 1,
-		  title: '编辑人员信息',
-		  closeBtn: 1,
-		  area: '516px',
-		  skin: '#fff', //没有背景色
-		  shadeClose: true,
-		  content: $('#editcontent'),
-		  btn:["保存","关闭"],
-		  btn1:function(index,layero){
-			  var Name=$("#Name").val();
-			  var Age=$("#Age").val();
-			  var Gender=$("#Gender").val();
-			  var Height=$("#Height").val();
-			  var Province=$("#Province").val();
-			  var Sport=$("#Sport").val();
-			  var obj = {
-				"Name":Name,
-			  	"Age": Age,
-			  	"Gender": Gender,
-			  	"Height": Height,
-			  	"Province": Province,
-				"Sport":Sport
-			  };
-			  reponse.editsavetr(obj, "table");
-			  layer.close(index);
-		  },btn2:function(index,layero){
-			  layer.close(index);
-		  }
-		});
-	}
-	function deletetr(a, e) {
-		var tr = $(a).parent().parent();
-		reponse.deletetr(tr, e);
-	}
-	function coldata(){
-		var pp=reponse.Columndata("Name","table");
-		alert(pp);
-	}
-</script>
+}
+    </script>
+</body>
 </html>
