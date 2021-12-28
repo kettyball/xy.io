@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+body{
+	background-color: #F0F0F0;
+    background-image:url("image/001.png");
+	background-repeat: no-repeat;
+	margin-right: auto;
+	margin: 0px 0px 0px 0px;
+}
+
+.headfirst{
+    background-color: #255176;
+    height: 50px;
+}
+.fontfirst{
+    font-style:normal;
+	font-variant:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size: 20px;
+    color: white;
+    margin-left: 50px;
+    line-height:250%;
+}
+.container{
+	background-color: #7bb3ca;
+	height: 400px;
+	margin-top: -21px;
+}
+.h-content {
+	width: 900px;
+	margin: 0px auto;
+	position: relative;
+	
+} 
+.h-content div{
+	width:50%;
+	height: 100%
+}
+input[type=text], select {
+	width: 20%;
+	padding: 8px 20px;
+	margin: 8px 0;
+	color: #C4C5C6;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+
+.search{
+	float: left;
+    width: 418px;
+    height: 42px;
+    margin-left: 150px;
+	margin-top: 40px;
+}
+.search input {
+    width: 345px;
+    height: 40px;
+    border: 1px solid #255176;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 20px;
+    float: left;
+}
+.search button {
+    float: left;
+    width: 50px;
+    height: 40px;
+	margin-left: 10px;
+	margin-top: 5px;
+    border: 0;
+	border-radius: 4px;
+}
+button {
+    cursor: pointer;
+}
+.addcourse{
+	float: left;
+	margin-left: 200px;
+	margin-top: 40px;
+	font-size: 0px;
+}
+
+.addcourse p4{
+	font-size: 25px;
+}
+.addcourse button{
+	height: 50px;
+	background-image: linear-gradient(#7bb3ca, #285EAA);
+	border-radius: 15px;
+	color:#DAE2ED;
+}
+.wholecontain
+{
+	margin: 0 auto;
+	margin-top: -50px;
+	padding-left: 50px;
+	padding-right: 50px;
+    max-width: 1000px;
+}
+
+.headlist
+{
+	position: relative;
+	padding-left: 0;
+	padding-right: 0;
+    padding: 24px 24px 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.headlist h2
+{
+  font-size: 24px;
+    color: #080808;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 0 16px 0 0;
+	text-align: left;
+}
+.headlist p
+{
+  font-size: 14px;
+    color: #666;
+    line-height: 22px;
+    margin: 8px 0 0 0;
+}
