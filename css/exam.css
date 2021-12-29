@@ -97,4 +97,10 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
+.footer {
+	padding: 20px;
+	color:#7BB3CA;
+	font-weight: bold;
+	text-align: center;
+	background: #ddd;
+}

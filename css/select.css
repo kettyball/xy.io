@@ -52,5 +52,11 @@ body{
 	height: 300px;
 	margin-left:100px;
 }
-
+.footer {
+	padding: 20px;
+	color:#7BB3CA;
+	font-weight: bold;
+	text-align: center;
+	background: #ddd;
+}
 
