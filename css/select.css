@@ -27,31 +27,6 @@ body{
     margin-left: 50px;
     line-height:250%;
 }
-.h-content {
-	width: 900px;
-	margin: 0px auto;
-	position: relative;
-} 
-.h-content div{
-	width:50%;
-	height: 100%
-}
-.student{
-	margin-top: 200px;
-	float: left;
-}
-.teacher{
-	margin-top: 200px;
-	float: right;
-}
-.student-img {
-	height: 300px;
-	margin-left: 40px;
-}
-.teacher-img {
-	height: 300px;
-	margin-left:100px;
-}
 .footer {
 	padding: 20px;
 	color:#7BB3CA;
