@@ -17,7 +17,8 @@ body{
 p1{
 	font-size: 15px;
 	line-height: 10%;
-	color: #6D9ABF;
+	color: #000;
+	
 	text-align: left;
 }
 h3{
@@ -87,8 +88,18 @@ input[type=text1] {
   border-radius: 4px;
   box-sizing: border-box;
 }
+input[type=text], textarea {
+	width: 50%;
+	padding: 8px 20px;
+	margin: 8px 0;
+	color: #CCC;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
 
-input[type=text], select {
+input[type=text], select{
   width: 20%;
   padding: 8px 20px;
   margin: 8px 0;
