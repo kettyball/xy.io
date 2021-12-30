@@ -33,13 +33,13 @@ body{
 	margin-top: -21px;
 }
 .h-content {
-	width: 900px;
+	width: 60%;
 	margin: 0px auto;
 	position: relative;
 	
 } 
 .h-content div{
-	width:50%;
+	width: 50%;
 	height: 100%
 }
 .container-1{
