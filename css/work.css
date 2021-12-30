@@ -53,50 +53,47 @@ input[type=text], select {
 	box-sizing: border-box;
 }
 
-.column
-{
-  width:97%;
+.column{
+  width:100%;
   padding-top:10px;
-  padding-left: 10px;
-  padding-right:10px;
+  padding-left: 0px;
+  padding-right:30px;
   display: block;
 }
-
 .card {
-  background-color: #93B6D3;
-  padding: 20px;
+  
+	background-color: #93B6D3;
+	padding: 20px;
 }
 .rightcolumn {
   display: block;
   position:relative;
-  width: 20%;
+  width:20%;
   float:right;
   height:100%;
   z-index: 9999;
 }
 .rightcolumn .card a {
     display: block;
-    width: 100%;
+    width:100%;
     height: 40px;
     font-size: 14px;
     color: white;
-	font-weight: bold;
     text-decoration: none;
     line-height: 40px;
     cursor: pointer;
     margin-top: 20px;
     text-align: center;
-    border: 2px solid #eaeaef;
+    border: 1px solid #eaeaef;
 }
 .r{
-  width:1300px;
   
   margin-right: auto;
   margin-left: auto;
 }
 .leftcolumn {   
   display: block;
-  width: 78%;
+  width: 80%;
   height:100%;
   float:left;
 }
@@ -163,56 +160,48 @@ button {
     max-width: 1000px;
 }
 
-.headlist
-{
+.headlist{
 	position: relative;
 	padding-left: 0;
 	padding-right: 0;
     padding: 24px 24px 16px;
     display: flex;
-    justify-content: flex-start;
     align-items: baseline;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.headlist h2
-{
-  font-size: 24px;
+.headlist h2{
+	font-size: 24px;
     color: #080808;
     font-weight: 600;
     line-height: 32px;
     margin: 0 16px 0 0;
 	text-align: left;
 }
-.headlist p
-{
-  font-size: 14px;
+.headlist p{
+	font-size: 14px;
     color: #666;
     line-height: 22px;
     margin: 8px 0 0 0;
 }
-.box001
-{
+.box001{
   position: relative;
 }
-.box002
-{
+.box002{
   width: 100%;
     height: 100%;
     overflow: hidden;
     margin-bottom: -32px;
 }
-.box003
-{
+.box003{
   height:100%;
     padding: 0 0 32px;
     box-sizing: content-box;
 }
-.box004
-{
-	height: 100%;
-    width: auto;
-    margin: 0
+.box004{
+	height: 58%;
+    margin: 0;
+	width: 32%;
 }
 .picture
 {
@@ -235,6 +224,46 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+div.box2
+{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+div.gallery {
+	margin: 1.5%;
+	border: 1px solid #ccc;
+	float: left;
+	width: calc(25% - 50px);
+	height: 150px;
+}
+
+div.gallery:hover {
+  border: 2px solid #255176;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+	padding: 0px;
+	margin-top: -25px;
+	text-align: center;
+	font-size: 15px;
+}
+div.box1
+{
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+
 }
 .footer {
 	padding: 20px;
