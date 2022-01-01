@@ -52,17 +52,17 @@ function myFunction(xml) {
   var x = xmlDoc.getElementsByTagName("CD");
   for (i = 0; i<x.length; i++) {
     table += "<tr><td>" +
-    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("NUMBER")[0].childNodes[0].nodeValue +
     "</td><td>" +
-    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
     "</td><td>" +
-    x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("TEANAME")[0].childNodes[0].nodeValue +
     "</td><td>" +
-    x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
     "</td><td>" +
-    x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("SCORE")[0].childNodes[0].nodeValue +
     "</td><td>" +
-    x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("STUDY")[0].childNodes[0].nodeValue +
     "</td></tr>";
   }
   document.getElementById("demo").innerHTML = table;
