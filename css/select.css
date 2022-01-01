@@ -34,4 +34,12 @@ body{
 	text-align: center;
 	background: #ddd;
 }
-
+.course{
+	padding-left: 100PX;
+}
+.course table{
+	width: 900px;
+	height: 30px;
+	font-size: 15px;
+	line-height: 30px;
+}

@@ -2,12 +2,12 @@
 <!--  Edited by XMLSpy®  -->
 <CATALOG>
 <CD>
-<TITLE>Empire Burlesque</TITLE>
-<ARTIST>Bob Dylan</ARTIST>
-<COUNTRY>USA</COUNTRY>
-<COMPANY>Columbia</COMPANY>
-<PRICE>10.90</PRICE>
-<YEAR>1985</YEAR>
+<NUMBER>课程编号</NUMBER>
+<NAME>课程名称</NAME>
+<TEANAME>教师姓名</TEANAME>
+<TIME>开课时间</TIME>
+<SCORE>学分</SCORE>
+<STUDY>剩余容量</STUDY>
 </CD>
 <CD>
 <TITLE>Hide your heart</TITLE>
