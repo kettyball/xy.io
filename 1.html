@@ -6,20 +6,9 @@
 table,th,td {
   border : 1px solid black;
   border-collapse: collapse;
-
 }
 th,td {
-  padding:0px;
-width:10px;
-}
-	.course{
-	padding-left: 100PX;
-}
-.course table{
-	width: 900px;
-	height: 30px;
-	font-size: 15px;
-	line-height: 30px;
+  padding: 5px;
 }
 </style>
 </head>
@@ -29,10 +18,7 @@ width:10px;
 
 <button type="button" onclick="loadXMLDoc()">获取我收藏的 CD</button>
 <br><br>
-<div class="course">
-			<table id="demo">
-			</table>
-		</div>
+<table id="demo"></table>
 
 <script>
 function loadXMLDoc() {
@@ -48,21 +34,13 @@ function loadXMLDoc() {
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  var table="<tr><th>课程编号</th><th>课程名称</th><th>教师姓名</th><th>开课时间</th><th>学分</th><th>剩余容量</th></tr>";
+  var table="<tr><th>Artist</th><th>Title</th></tr>";
   var x = xmlDoc.getElementsByTagName("CD");
-  for (i = 0; i<x.length; i++) {
+  for (i = 0; i <x.length; i++) {
     table += "<tr><td>" +
-    x[i].getElementsByTagName("NUMBER")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
     "</td><td>" +
-    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("TEANAME")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("SCORE")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("STUDY")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
     "</td></tr>";
   }
   document.getElementById("demo").innerHTML = table;
