@@ -158,9 +158,9 @@ th,td {
         </ul>
     </div>
     <div class="body_right">
-<button type="button" onclick="loadXMLDoc()">获取我收藏的 CD</button>
-<br><br>
-<table id="demo"></table>
+		<button type="button" onclick="loadXMLDoc()">获取我收藏的 CD</button>
+		<br><br>
+		<table id="demo"></table>
 	</div>
 </div>
 <div class="footer">
@@ -180,7 +180,7 @@ function loadXMLDoc() {
       myFunction(this);
     }
   };
-  xhttp.open("GET", "cd_catalog.xml", true);
+  xhttp.open("GET", "ajax/basicselect.xml", true);
   xhttp.send();
 }
 function myFunction(xml) {
