@@ -180,7 +180,8 @@
 	</div>
 </div>
 <div class="footer">
-	<pre>ketty ball</pre>
+  <pre style="float: left; margin-left: 500px;">ketty ball    </pre>
+    <button type="button" onClick="loadXMLDoc()" style="float: left;"> 联系方式</button>
 </div>
 <script src="js/menustyle.js"></script>
 </body>
@@ -320,5 +321,30 @@
 		var pp=reponse.Columndata("Name","table");
 		alert(pp);
 	}
+</script>
+<script>
+function loadXMLDoc()
+{
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		// IE6, IE5 浏览器执行代码
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","ajax/tele.txt",true);
+	xmlhttp.send();
+}
 </script>
 </html>
