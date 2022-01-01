@@ -1,175 +1,73 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>登录</title>
-    <link rel="stylesheet" href="CSS/normalize.css">
-	  </head>
+<head>
+<meta charset="utf-8">
 <style>
-	
-body {
-    width: 100%;
-    height: 100%;
-    font-family: 'Open Sans',sans-serif;
-    margin: 0;
-    background: url(./src/background.jpeg) no-repeat;
-    background-size: 1920px auto;
-}
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
 
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
-
-input[type=submit]:hover {
-  background-color: #45a049;
+th,td {
+  padding:0px;
+width:10px;
 }
-
-div {
-  display: block;
+	.course{
+	padding-left: 100PX;
 }
-textarea {
-  width: 100%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
-}
-.login_logo
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -150px 0 0 -150px;
-    width: 300px;
-    height: 400px;
-}
-.login_logo h1 {
-    color: #fff;
-    text-shadow: 0 0 10px;
-    letter-spacing: 1px;
-    text-align: center;
-}
-h1 {
-    display: block;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-.link
-{
-  display: block;
-  color:white;
-  background-color: #4CAF50;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: center;
-}
-.link:hover
-{
-    background-color: #45a049;
-}
-a {
-    text-decoration: none;
+.course table{
+	width: 900px;
+	height: 30px;
+	font-size: 15px;
+	line-height: 30px;
 }
 </style>
-
+</head>
 <body>
 
-    <div class="login_logo">
-        <h1>Login</h1>
-  <form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
-    <label for="name">用户名</label>
-    <input type="text" id="name" placeholder="用户名" >
-    <label for="password">密码</label>
-    <input type="text" id="password"  placeholder="密码" >
-    <label for="place">身份</label>
-    <select id="identity" name="identity" onchange="testClk()">
-      <option value="user">用户</option>
-      <option value="manager">管理员</option>
-    </select>
-    <div id="org"></div>
-    <a class="link" href="index.html" onclick="javascript:checkCookie(document.getElementById('name').value);return validateForm()">登录</a>
-  </form>
-</div>
+<h1>XMLHttpRequest 对象</h1>
 
-<script> 
-  function testClk(){ 
-    var obj = document.getElementById("org"); 
-    var sel = document.getElementById("identity"); 
-    if (sel.value == "manager") { 
-      var input1 = document.createElement('input');
-       input1.setAttribute('type', 'text');
-        input1.setAttribute('name', 'countrywrite'); 
-        obj.insertBefore(input1,null);
-      } }
-   </script> 
+<button type="button" onclick="loadXMLDoc()">获取我收藏的 CD</button>
+<br><br>
+<div class="course">
+			<table id="demo">
+			</table>
+		</div>
 
 <script>
-  function validateForm(){
-  var x=document.forms["myForm"]["name"].value;
-    if (x==null || x==""){
-    alert("输入不得为空");
-    return false;
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
     }
-  }
-  </script>
-
-
- <script>
-    function setCookie(cname,cvalue,exdays){
-        var d = new Date();
-        d.setTime(d.getTime()+(exdays*24*60*60*1000));
-        var expires = "expires="+d.toGMTString();
-        document.cookie = cname+"="+cvalue+"; "+expires;
-    }
-    function getCookie(cname){
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0; i<ca.length; i++) {
-            var c = ca[i].trim();
-            if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
-        }
-        return "";
-    }
-    function checkCookie(cname){
-    setCookie("username",cname,30);
-	var user=getCookie("username");
-	if (user!=""){
-		alert("欢迎 " + user + "登录");
-	}
-	else {
-		user = prompt("请输入你的用户名:","");
-  		if (user!="" && user!=null){
-    		setCookie("username",user,30);
-    	}
-	}
+  };
+  xhttp.open("GET", "ajax_basicselect.xml", true);
+  xhttp.send();
 }
-    </script>
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>课程编号</th><th>课程名称</th><th>教师姓名</th><th>开课时间</th><th>学分</th><th>剩余容量</th></tr>";
+  var x = xmlDoc.getElementsByTagName("CD");
+  for (i = 0; i<x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
 </body>
 </html>
