@@ -191,20 +191,20 @@ function myFunction(xml) {
   var xmlDoc = xml.responseXML;
   var table="<tr><th>课程编号</th><th>课程名称</th><th>教师姓名</th><th>开课时间</th><th>学分</th><th>剩余容量</th></tr>";
   var x = xmlDoc.getElementsByTagName("CD");
-  for (i = 0; i <x.length; i++) {
+  for (i = 0; i<x.length; i++) {
     table += "<tr><td>" +
-    x[i].getElementsByTagName("NUMBER")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
     "</td><td>" +
-    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
-    "</td><td>" + 
-	x[i].getElementsByTagName("TEANAME")[0].childNodes[0].nodeValue +
-    "</td><td>" + 
-	x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
-    "</td><td>" + 
-	x[i].getElementsByTagName("SCORE")[0].childNodes[0].nodeValue +
-    "</td><td>" + 
-	x[i].getElementsByTagName("STUDY")[0].childNodes[0].nodeValue +
-    "</td></tr>" + ;
+    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
+    "</td></tr>";
   }
   document.getElementById("demo").innerHTML = table;
 }
