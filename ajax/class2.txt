@@ -1,0 +1,6 @@
+[{"Number": "B0001","Name": "通识课1","Teaname": "一二三","Time": "星期五 1-2节","Grade": 2,"Sp": "80/100"},
+{"Number": "B0002","Name": "通识课2","Teaname": "一二三","Time": "星期四 6-7节","Grade": 2,"Sp": "20/100"},
+{"Number": "B0003","Name": "通识课3","Teaname": "一二三","Time": "星期四 6-7节","Grade": 2,"Sp": "20/100"},
+{"Number": "B0004","Name": "通识课4","Teaname": "一二三","Time": "星期四 6-7节","Grade": 2,"Sp": "20/100"},
+{"Number": "B0005","Name": "通识课5","Teaname": "一二三","Time": "星期四 6-7节","Grade": 2,"Sp": "20/100"},
+{"Number": "B0006","Name": "通识课6","Teaname": "一二三","Time": "星期三 8-9节","Grade": 2,"Sp": "0/100"}]

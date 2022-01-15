@@ -1,0 +1,3 @@
+[{"Number": "A0001","Name": "高等数学","Teaname": "一二三","Time": "星期一 1-2节","Grade": 5,"Sp": "40/50"},
+{"Number": "A0002","Name": "线性代数","Teaname": "四五六","Time": "星期四 3-5节","Grade": 3,"Sp": "40/50"},
+{"Number": "A0003","Name": "概率论与数理统计","Teaname": "七八九","Time": "星期三 6-8节","Grade": 3,"Sp": "40/50"}]
