@@ -1,0 +1,11 @@
+@charset "utf-8";
+body{
+	background-color:#7bb3ca;
+    background-image:url("image/001.png");
+	background-repeat: no-repeat;
+	margin-right: auto;
+	font-size:17px;
+	color:black;
+	margin: 0px 0px 0px 0px;
+}
+

@@ -8,7 +8,7 @@
 
 <body>
 <div class="headfirst">
-	<span class="fontfirst">学生选课管理平台</span>
+	<span class="fontfirst" id="demo"></span>
 </div>
 <br>
 <div class="container">
@@ -42,36 +42,42 @@
 <br>
 <br>
 <div class="h-content">
-<table width="900" border="0">
-  <tbody>
-    <tr>
-      <td>
+	<table width="900" border="0">
+		<tbody>
+			<tr>
+				<td>
 		  <span style="cursor:pointer">
 			  <a href="select.html">
 				  <img src="image/选课.png" class="xuanke-img" alt=""/>
 			  </a>
 		  </span></td>
-      <td>&nbsp;
+				<td>&nbsp;
 		  <span style="cursor:pointer">
 			  <a href="exam.html">
 				  <img src="image/问卷.png" class="xuanke-img" alt=""/>
 			  </a>
 		  </span></td>
-      <td>&nbsp;
+				<td>&nbsp;
 		  <span style="cursor:pointer">
 			  <a href="new.html">
 				  <img src="image/通知.png" class="xuanke-img" alt=""/>
 			  </a>
 		  </span></td>
-      <td>&nbsp;
+				<td>&nbsp;
 		  <span style="cursor:pointer">
 			  <a href="作业.html">
 				  <img src="image/作业.png" class="xuanke-img" alt=""/>
 			  </a>
 		  </span></td>
-    </tr>
-  </tbody>
-</table>
-	</div>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script>
+function print() {
+    document.getElementById("demo").innerHTML="学生选课管理平台";
+}
+setTimeout(print, 3000);
+</script>
 </body>
 </html>
