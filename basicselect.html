@@ -31,6 +31,31 @@ th,td {
   padding: 5px;
 }
 	</style>
+<script>
+function loadXMLDoc()
+{
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		// IE6, IE5 浏览器执行代码
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","ajax/tele.txt",true);
+	xmlhttp.send();
+}
+</script>
 </head>
 <body>
 <div class="body_con">
@@ -165,31 +190,6 @@ th,td {
 <div class="footer">
 	<pre>ketty ball</pre>
 </div>
-<script>
-function loadXMLDoc()
-{
-	var xmlhttp;
-	if (window.XMLHttpRequest)
-	{
-		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-		xmlhttp=new XMLHttpRequest();
-	}
-	else
-	{
-		// IE6, IE5 浏览器执行代码
-		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function()
-	{
-		if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		{
-			document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-		}
-	}
-	xmlhttp.open("GET","/ajax/tele.txt",true);
-	xmlhttp.send();
-}
-</script>
 <script src="js/menustyle.js"></script>
 </body>
 <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
