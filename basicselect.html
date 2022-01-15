@@ -31,32 +31,28 @@ th,td {
   padding: 5px;
 }
 	</style>
-<script>
-function loadXMLDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      myFunction(this);
-    }
-  };
-  xhttp.open("GET", "ajax/cd_catalog.xml", true);
-  xhttp.send();
-}
-function myFunction(xml) {
-  var i;
-  var xmlDoc = xml.responseXML;
-  var table="<tr><th>Artist</th><th>Title</th></tr>";
-  var x = xmlDoc.getElementsByTagName("CD");
-  for (i = 0; i <x.length; i++) {
-    table += "<tr><td>" +
-    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-    "</td></tr>";
-  }
-  document.getElementById("demo").innerHTML = table;
-}
-</script>
+<script src="jquery.js" charset="utf-8"></script>
+    <script>
+        window.onload=function(){
+            $.ajax({
+                type: "GET",
+                url: "ajax/tele.txt",
+                dataType: "json",
+                success: function(result){
+                    let json=result;
+                    console.log(json);
+                    for(i=0;i<json.length;i++){
+                        var trTD = "<tr><td>"+json[i].name+"</td><td>"+json[i].age+"</td></tr>";
+                        $("#tb").append(trTD);
+                    }
+                },
+                error: function(){
+                    alert("失败了");
+                }
+            });
+        }();
+    </script>
+
 
 </head>
 <body>
@@ -185,12 +181,14 @@ function myFunction(xml) {
         </ul>
     </div>
     <div class="body_right">
-		<button type="button" onclick="loadXMLDoc()">获取我收藏的 CD</button>
-		<br><br>
-		<table id="demo"></table>
-</div>
+		<div>
+        <table  style="border: 1" id="tb"><tr><td>姓名</td><td>年龄</td></tr></table>
+		</div>
+
+	</div>
 <div class="footer">
 	<pre>ketty ball</pre>
+</div>
 </div>
 <script src="js/menustyle.js"></script>
 </body>
