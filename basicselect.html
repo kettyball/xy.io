@@ -24,8 +24,13 @@
 			margin-right: 10px;
 		}
 table,th,td {
-  border : 1px solid black;
-  border-collapse: collapse;
+	border : 1px solid black;
+	margin-left: 100px;
+	margin-top: 100px;
+	font-size: 17px;
+	line-height: 40px;
+	width: 135px;
+	border-collapse: collapse;
 }
 th,td {
   padding: 5px;
@@ -42,7 +47,7 @@ th,td {
                     let json=result;
                     console.log(json);
                     for(i=0;i<json.length;i++){
-                        var trTD = "<tr><td>"+json[i].name+"</td><td>"+json[i].age+"</td></tr>";
+                        var trTD = "<tr><td>"+json[i].Number+"</td><td>"+json[i].Name+"</td><td>"+json[i].Teaname+"</td><td>"+json[i].Time+"</td><td>"+json[i].Grade+"</td><td>"+json[i].Sport+"</td></tr>";
                         $("#tb").append(trTD);
                     }
                 },
@@ -182,7 +187,16 @@ th,td {
     </div>
     <div class="body_right">
 		<div>
-        <table  style="border: 1" id="tb"><tr><td>姓名</td><td>年龄</td></tr></table>
+			<table  style="border: 1" id="tb">
+			<tr>
+				<td><strong>课程编号</strong></td>
+				<td><strong>课程名称</strong></td>
+				<td><strong>教师姓名</strong></td>
+				<td><strong>开课时间</strong></td>
+				<td><strong>学分</strong></td>
+				<td><strong>剩余容量</strong></td>
+			</tr>
+			</table>
 		</div>
 
 	</div>
