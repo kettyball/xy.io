@@ -28,8 +28,8 @@
     <div class="body_top">
 		<span class="fontfirst">学生选课管理平台</span>
 	</div>
-     <div class="body_left">
-        <ul class="body_left_list">
+	<div class="body_left">
+		<ul class="body_left_list">
             <li>
                 <label>
                     <span>选 课</span>
@@ -42,21 +42,21 @@
                             <i class="iconfont iconYYGK"></i>
                             <span>基础课</span>
                             <i class="iconfont iconyoujiantou"></i>
-                            <a href="select.html"></a>
+                            <a href="basicselect1.html"></a>
                         </label>
                         <ul>
                             <li>
                                 <label>
                                     <span>公共基础课</span>
                                     <i class="iconfont iconyoujiantou"></i>
-                                    <a href="select.html"></a>
+                                    <a href="basicselect1.html"></a>
                                 </label>
                             </li>
                             <li>
                                 <label>
                                     <span>学科基础课</span>
                                     <i class="iconfont iconyoujiantou"></i>
-                                    <a href="select.html"></a>
+                                    <a href="basicselect1.html"></a>
                                 </label>
                             </li>
                         </ul>
@@ -66,21 +66,21 @@
                             <i class="iconfont iconYYGK"></i>
                             <span>通识课</span>
                             <i class="iconfont iconyoujiantou"></i>
-                            <a href="select.html"></a>
+                            <a href="basicselect2.html"></a>
                         </label>
                         <ul>
                             <li>
                                 <label>
                                     <span>通识选修课</span>
                                     <i class="iconfont iconyoujiantou"></i>
-                                    <a href="select.html"></a>
+                                    <a href="basicselect2.html"></a>
                                 </label>
                             </li>
                             <li>
                                 <label>
                                     <span>通识必修课</span>
                                     <i class="iconfont iconyoujiantou"></i>
-                                    <a href="select.html"></a>
+                                    <a href="basicselect2.html"></a>
                                 </label>
                             </li>
                         </ul>
@@ -99,7 +99,7 @@
                             <i class="iconfont iconYYGK"></i>
                             <span>综合新闻</span>
                             <i class="iconfont iconyoujiantou"></i>
-                            <a href="new1.html"></a>
+                            <a href="new.html"></a>
                         </label>
                     </li>
                     <li>
@@ -107,7 +107,7 @@
                             <i class="iconfont iconYYGK"></i>
                             <span>通知公告</span>
                             <i class="iconfont iconyoujiantou"></i>
-                            <a href="new2.html"></a>
+                            <a href="new.html"></a>
                         </label>
 					</li>
                 </ul>
@@ -157,7 +157,7 @@
 					<ul class="poster-list">
 						<li class="poster-item">
 							<div class="item"> 
-								<a href="#">
+								<a href="#/new1">
 									<img class="tabImg" src="image/t1.png">
 								</a>
 								<span class="poster-item-title">新闻1</span> 
@@ -165,7 +165,7 @@
 						</li>
 						<li class="poster-item">
 							<div class="item"> 
-								<a href="#">
+								<a href="#/new2">
 									<img class="tabImg" src="image/t2.png">
 								</a>
 								<span class="poster-item-title">新闻2</span>
@@ -173,15 +173,15 @@
 						</li>
 						<li class="poster-item">
 							<div class="item"> 
-								<a href="#">
+								<a href="#/new3">
 									<img class="tabImg" src="image/t3.png">
-								</a> 
-								<span class="poster-item-title">新闻3</span> 
+								</a>
+								<span class="poster-item-title">新闻3</span>
 							</div>
 						</li>
 						<li class="poster-item">
 							<div class="item">
-								<a href="#">
+								<a href="#/new4">
 									<img class="tabImg" src="image/t4.png">
 								</a>
 								<span class="poster-item-title">新闻4</span>
@@ -189,7 +189,7 @@
 						</li>
 						<li class="poster-item">
 							<div class="item">
-								<a href="#">
+								<a href="#/new5">
 									<img class="tabImg" src="image/t5.png">
 								</a>
 								<span class="poster-item-title">新闻5</span>
@@ -208,12 +208,17 @@
 				<!--pc 图片轮转  end--> 
 			</div>
 		</div>
+		<div id="detail" style="width: 1000px;margin-left: 100px;">
+			<p style="align-content: center;font-weight: 600;padding: 20px;" id="biaoti"> </p>
+			<p style="font-size: 15px;line-height: 40px;float: left;" align="left" id="neirong"> </p>
+		</div>
 	</div>
 </div>
 <div class="footer">
 	<pre>ketty ball</pre>
 </div>
 <script src="js/menustyle.js"></script>
+<script src="js/new.js"></script>
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery.carousel-zl-fb.js"></script><!-- 首页切换 --> 
 <script>Caroursel.init($('.caroursel'))</script>
