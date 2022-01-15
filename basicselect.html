@@ -158,23 +158,14 @@ th,td {
         </ul>
     </div>
     <div class="body_right">
-		<button type="button" onclick="loadXMLDoc()">获取课程</button>
+		<button type="button" onclick="loadXMLDoc()">获取我收藏的 CD</button>
 		<br><br>
-		<div class="course">
-			<table id="demo">
-			</table>
-		</div>
+		<table id="demo"></table>
 	</div>
 </div>
 <div class="footer">
 	<pre>ketty ball</pre>
 </div>
-<script src="js/menustyle.js"></script>
-</body>
-<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-<script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/1.10.2/jquery.min.js"></script>
-
-
 <script>
 function loadXMLDoc() {
   var xhttp = new XMLHttpRequest();
@@ -183,30 +174,27 @@ function loadXMLDoc() {
       myFunction(this);
     }
   };
-  xhttp.open("GET", "ajax/basicselect.xml", true);
+  xhttp.open("GET", "cd_catalog.xml", true);
   xhttp.send();
 }
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  var table="<tr><th>课程编号</th><th>课程名称</th><th>教师姓名</th><th>开课时间</th><th>学分</th><th>剩余容量</th></tr>";
+  var table="<tr><th>Artist</th><th>Title</th></tr>";
   var x = xmlDoc.getElementsByTagName("CD");
   for (i = 0; i <x.length; i++) {
     table += "<tr><td>" +
-    x[i].getElementsByTagName("NUMBER")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
     "</td><td>" +
-    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
-    "</td><td>" + 
-	x[i].getElementsByTagName("TEANAME")[0].childNodes[0].nodeValue +
-    "</td><td>" + 
-	x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
-    "</td><td>" + 
-	x[i].getElementsByTagName("SCORE")[0].childNodes[0].nodeValue +
-    "</td><td>" + 
-	x[i].getElementsByTagName("STUDY")[0].childNodes[0].nodeValue +
-    "</td></tr>" + ;
+    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td></tr>";
   }
   document.getElementById("demo").innerHTML = table;
 }
 </script>
+<script src="js/menustyle.js"></script>
+</body>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/1.10.2/jquery.min.js"></script>
+
 </html>
