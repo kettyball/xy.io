@@ -26,6 +26,14 @@ h3{
 	font-weight:bold;
 	color:#6D9ABF;
 }
+.alertceng{
+			background: #FFFFFF;
+			padding: 10px;
+			display: none;
+		}
+		.alertceng span.title{
+			margin-right: 10px;
+		}
 .headfirst{
     background-color: #255176;
     height: 50px;
@@ -68,7 +76,6 @@ h3{
 .test{
 	margin-left:100px;
 	margin-right:100px;
-	margin-top: 50px;
 	line-height: 50px;
 	background:#E2EDF5;
     padding: 50px 50px;

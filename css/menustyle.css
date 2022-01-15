@@ -358,3 +358,11 @@ textarea {
     left: 0;
     z-index: 1;
 }
+.alertceng{
+			background: #FFFFFF;
+			padding: 10px;
+			display: none;
+		}
+		.alertceng span.title{
+			margin-right: 10px;
+		}
